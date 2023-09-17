@@ -11,6 +11,8 @@ class KMeans:
         # (with defaults) as you see fit
         pass
         
+
+    #Llioyd's algorithm
     def fit(self, X):
         """
         Estimates parameters for the classifier
@@ -20,6 +22,26 @@ class KMeans:
                 m rows (#samples) and n columns (#features)
         """
         # TODO: Implement
+
+        unchanged = False
+
+        # initialize cluster_centers
+        while unchanged:
+            dataset = X
+            centers = []
+
+            for instance in dataset:
+                c_t = 99
+                for m in centers: 
+                    #calculate distance
+                    new_distance = euclidean_distance()
+
+                    if new_distance < c_t:
+                        c_t = new_distance
+
+            for m in centers: 
+                #find mean of the cluster
+
         raise NotImplemented()
     
     def predict(self, X):
